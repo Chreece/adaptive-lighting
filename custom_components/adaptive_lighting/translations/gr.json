@@ -1,0 +1,49 @@
+{
+  "title": "Adaptive Lighting",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Επιλογή ονόματος για το Adaptive Lighting",
+        "description": "Κάθε οντότητα μπορεί να περιέχει πολλαπλούς φωτισμούς!",
+        "data": {
+          "name": "Όνομα"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Η συσκευή έχει ήδη ρυθμιστεί"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Adaptive Lighting επιλογές",
+        "description": "Όλες οι επιλογές του Adaptive Lighting. Τα ονόματα των επιλογών αντιστιχούν στις ρυθμίσεις YAML. Δεν εμφανίζονται επιλογές οντοτήτων που έχουν ρυθμιστεί με YAML.",
+        "data": {
+          "lights": "φωτισμοί",
+          "initial_transition": "initial_transition, όταν οι φωτισμοί από 'off' αλλάζουν σε 'on' ή όταν το 'sleep_state' αλλάζει",
+          "interval": "interval, χρόνος μεταξύ αλλαγών σε δευτερόλεπτα",
+          "max_brightness": "max_brightness, σε %",
+          "max_color_temp": "max_color_temp, σε Κέλβιν",
+          "min_brightness": "min_brightness, σε %",
+          "min_color_temp": "min_color_temp, σε Κέλβιν",
+          "only_once": "only_once, προσαρμογή φωτισμών μόνο κατά την εκκίνηση τους",
+          "prefer_rgb_color": "prefer_rgb_color, χρήση του 'rgb_color' έναντι του 'color_temp' αν είναι δυνατών",
+          "separate_turn_on_commands": "separate_turn_on_commands, για κάθε χαρακτηριστικό (χρώμα, φωτεινότητα κτλ.) στο 'light.turn_on', απαιτείται για κάποιους φωτισμούς.",
+          "sleep_brightness": "sleep_brightness, σε %",
+          "sleep_color_temp": "sleep_color_temp, σε Κέλβιν",
+          "sunrise_offset": "sunrise_offset, σε +/- δευτερόλεπτα",
+          "sunrise_time": "sunrise_time, σε 'HH:MM:SS' format (αν 'None', χρησιμοποιεί την τοποθεσία του συστήματος)",
+          "sunset_offset": "sunset_offset, in +/- seconds",
+          "sunset_time": "sunset_time, σε 'HH:MM:SS' format (αν 'None', χρησιμοποιεί την τοποθεσία του συστήματος)",
+          "take_over_control": "take_over_control, αν οτιδήποτε άλλο εκτός του Adaptive Lighting καλεί την υπηρεσία 'light.turn_on' όταν κάποιος φωτισμός είναι ήδη ανοιχτός, παύση προσαρμογής του φωτισμού έως η κατάσταση του (ή του διακόπτη) να γίνει: off -> on.",
+          "detect_non_ha_changes": "detect_non_ha_changes, ανιχνεύει τις αλλαγές >10% που έχουν γίνει στους φωτισμούς (συμπεριλαμβανομένου εκτός του HA), απαιτείται 'take_over_control' ενργοποιημένο (καλεί την υπηρεσία 'homeassistant.update_entity' κάθε 'interval'!)",
+          "transition": "transition, σε δευτερόλεπτα"
+        }
+      }
+    },
+    "error": {
+      "option_error": "Μη έγκυρη επιλογή"
+    }
+  }
+}
